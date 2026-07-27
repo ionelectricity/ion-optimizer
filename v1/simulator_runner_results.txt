@@ -1,0 +1,866 @@
+==================================================
+▶ RUNNING EXPERIMENT: Baseline Dumb Control
+==================================================
+  [t=05] 🚗 EV Arrived (SoC: 14.0kWh)
+  [t=20] 🚗 EV Departed (SoC: 70.0kWh)
+
+📊 FINAL RESULTS: Baseline Dumb Control
+Total Daily Grid Cost: $24.51
+
+==================================================
+▶ RUNNING EXPERIMENT: OR-Tools MPC Control
+==================================================
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: +0.0kW | BatChg(1.5kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW) | WaterHeater(3.0kW)
+[02:00] Tariff: 5c | Net: +0.0kW | WaterHeater(3.0kW)
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | V2X(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(2.928kW) | V2X(1.572kW)
+[08:00] Tariff: 5c | Net: +0.0kW | BatDis(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | V2X(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +5.0kW | EVChg(3.0kW)
+[18:00] Tariff: 10c | Net: +6.6kW | EVChg(3.072kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: +0.0kW | BatChg(1.5kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW) | WaterHeater(3.0kW)
+[02:00] Tariff: 5c | Net: -1.8kW | BatChg(1.184kW)
+[03:00] Tariff: 5c | Net: -1.0kW | Idling
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(4.112kW) | V2X(0.888kW)
+[07:00] Tariff: 5c | Net: +0.0kW | V2X(4.5kW)
+[08:00] Tariff: 5c | Net: +0.0kW | BatDis(3.058kW) | V2X(0.442kW)
+[09:00] Tariff: 5c | Net: +0.0kW | BatDis(0.853kW) | V2X(1.647kW)
+[10:00] Tariff: 10c | Net: +1.5kW | Idling
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +5.5kW | EVChg(4.477kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +9.0kW | EVChg(7.0kW)
+[18:00] Tariff: 10c | Net: +10.5kW | EVChg(7.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: +0.0kW | BatChg(1.5kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -4.0kW | Idling
+[02:00] Tariff: 5c | Net: -2.9kW | BatChg(0.131kW)
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(1.023kW) | V2X(3.977kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(4.5kW)
+[08:00] Tariff: 5c | Net: +0.0kW | V2X(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | BatDis(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +5.5kW | EVChg(4.477kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +9.0kW | EVChg(7.0kW)
+[18:00] Tariff: 10c | Net: +3.5kW | Idling
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -0.0kW | BatChg(1.493kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -4.0kW | Idling
+[02:00] Tariff: 5c | Net: -3.0kW | Idling
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(1.023kW) | V2X(3.977kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(4.5kW)
+[08:00] Tariff: 5c | Net: +0.0kW | V2X(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | BatDis(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +5.5kW | EVChg(4.477kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +9.0kW | EVChg(7.0kW)
+[18:00] Tariff: 10c | Net: +3.5kW | Idling
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -1.5kW | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -4.0kW | Idling
+[02:00] Tariff: 5c | Net: -1.8kW | BatChg(1.24kW)
+[03:00] Tariff: 5c | Net: -0.8kW | BatChg(0.201kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | BatDis(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | V2X(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(0.4kW) | V2X(4.1kW)
+[08:00] Tariff: 5c | Net: +0.0kW | BatDis(3.1kW) | V2X(0.4kW)
+[09:00] Tariff: 5c | Net: +0.0kW | BatDis(0.523kW) | V2X(1.977kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +0.8kW | Idling
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +6.5kW | EVChg(4.477kW)
+[18:00] Tariff: 10c | Net: +10.5kW | EVChg(7.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+  [t=05] 🚗 EV Arrived (SoC: 14.0kWh)
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: +0.0kW | BatChg(1.5kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -2.5kW | BatChg(1.518kW)
+[02:00] Tariff: 5c | Net: -3.0kW | Idling
+[03:00] Tariff: 5c | Net: -1.0kW | Idling
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(3.022kW) | V2X(1.478kW)
+[08:00] Tariff: 5c | Net: +0.0kW | V2X(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | V2X(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +6.5kW | EVChg(4.478kW)
+[18:00] Tariff: 10c | Net: +3.5kW | Idling
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -1.5kW | BatChg(0.001kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -4.0kW | BatChg(0.02kW)
+[02:00] Tariff: 5c | Net: -0.0kW | BatChg(2.997kW)
+[03:00] Tariff: 5c | Net: -1.0kW | Idling
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(2.963kW) | V2X(2.037kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(0.537kW) | V2X(3.963kW)
+[08:00] Tariff: 5c | Net: +0.0kW | BatDis(3.5kW)
+[09:00] Tariff: 20c | Net: +1.5kW | BatDis(1.022kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +1.0kW | Idling
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +9.0kW | EVChg(7.0kW)
+[18:00] Tariff: 10c | Net: +10.5kW | EVChg(7.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: +0.0kW | BatChg(1.501kW) | BatDis(0.001kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -2.4kW | BatChg(1.638kW)
+[02:00] Tariff: 5c | Net: -1.0kW | BatChg(2.001kW)
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 40c | Net: +1.0kW | BatDis(0.486kW)
+[05:00] Tariff: 5c | Net: +0.0kW | BatDis(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(1.537kW) | V2X(3.463kW)
+[07:00] Tariff: 5c | Net: +0.0kW | V2X(4.5kW)
+[08:00] Tariff: 5c | Net: +0.0kW | BatDis(3.5kW)
+[09:00] Tariff: 20c | Net: +2.5kW | Idling
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +1.2kW | Idling
+[17:00] Tariff: 10c | Net: +9.0kW | EVChg(7.0kW)
+[18:00] Tariff: 10c | Net: +10.5kW | EVChg(7.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -1.5kW | BatChg(0.002kW) | BatDis(0.001kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -1.9kW | BatChg(2.138kW)
+[02:00] Tariff: 5c | Net: +0.0kW | BatChg(3.0kW)
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 40c | Net: +1.5kW | Idling
+[05:00] Tariff: 50c | Net: +0.5kW | BatDis(0.023kW) | V2X(3.463kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(4.5kW)
+[08:00] Tariff: 40c | Net: +3.5kW | Idling
+[09:00] Tariff: 20c | Net: +2.5kW | Idling
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +5.0kW | EVChg(3.0kW)
+[18:00] Tariff: 10c | Net: +7.5kW | EVChg(4.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -1.5kW | BatChg(0.002kW) | BatDis(0.001kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -1.9kW | BatChg(2.138kW)
+[02:00] Tariff: 5c | Net: +0.0kW | BatChg(3.0kW)
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 40c | Net: +1.5kW | Idling
+[05:00] Tariff: 50c | Net: +0.5kW | BatDis(0.023kW) | V2X(3.463kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(4.5kW)
+[08:00] Tariff: 40c | Net: +3.5kW | Idling
+[09:00] Tariff: 20c | Net: +2.5kW | Idling
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +5.0kW | EVChg(3.0kW)
+[18:00] Tariff: 10c | Net: +7.5kW | EVChg(4.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -1.5kW | BatChg(0.002kW) | BatDis(0.001kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -1.9kW | BatChg(2.138kW)
+[02:00] Tariff: 5c | Net: +0.0kW | BatChg(3.0kW)
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 40c | Net: +1.5kW | Idling
+[05:00] Tariff: 50c | Net: +0.5kW | BatDis(0.023kW) | V2X(3.463kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(4.5kW)
+[08:00] Tariff: 40c | Net: +3.5kW | Idling
+[09:00] Tariff: 20c | Net: +2.5kW | Idling
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +5.0kW | EVChg(3.0kW)
+[18:00] Tariff: 10c | Net: +7.5kW | EVChg(4.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: +0.0kW | BatChg(1.5kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: +0.0kW | BatChg(4.0kW)
+[02:00] Tariff: 5c | Net: -2.4kW | BatChg(0.637kW)
+[03:00] Tariff: 5c | Net: -1.0kW | Idling
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | BatDis(0.557kW) | V2X(3.443kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(4.522kW) | V2X(0.478kW)
+[07:00] Tariff: 5c | Net: +0.0kW | V2X(4.5kW)
+[08:00] Tariff: 5c | Net: +0.0kW | BatDis(2.943kW) | V2X(0.557kW)
+[09:00] Tariff: 20c | Net: +1.0kW | V2X(1.485kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +6.0kW | EVChg(4.0kW)
+[18:00] Tariff: 10c | Net: +6.5kW | EVChg(3.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -0.9kW | BatChg(0.57kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -2.4kW | BatChg(1.567kW)
+[02:00] Tariff: 5c | Net: +0.0kW | BatChg(3.0kW)
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | BatDis(3.952kW) | V2X(0.048kW)
+[06:00] Tariff: 5c | Net: +0.0kW | V2X(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(0.57kW) | V2X(3.93kW)
+[08:00] Tariff: 5c | Net: +0.0kW | BatDis(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | V2X(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +3.0kW | EVChg(2.014kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +4.2kW | EVChg(3.002kW)
+[17:00] Tariff: 10c | Net: +9.0kW | EVChg(7.0kW)
+[18:00] Tariff: 10c | Net: +6.5kW | EVChg(2.999kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -0.9kW | BatChg(0.57kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -2.4kW | BatChg(1.567kW)
+[02:00] Tariff: 5c | Net: +0.0kW | BatChg(3.0kW)
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | BatDis(2.452kW) | V2X(1.548kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(2.07kW) | V2X(2.93kW)
+[07:00] Tariff: 5c | Net: +0.0kW | V2X(4.5kW)
+[08:00] Tariff: 5c | Net: +0.0kW | BatDis(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | V2X(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +0.8kW | Idling
+[14:00] Tariff: 10c | Net: +0.8kW | Idling
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +6.2kW | EVChg(5.015kW)
+[17:00] Tariff: 10c | Net: +5.0kW | EVChg(3.0kW)
+[18:00] Tariff: 10c | Net: +10.5kW | EVChg(7.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -0.9kW | BatChg(0.57kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -2.4kW | BatChg(1.567kW)
+[02:00] Tariff: 5c | Net: +0.0kW | BatChg(3.0kW)
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | BatDis(2.452kW) | V2X(1.548kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(2.07kW) | V2X(2.93kW)
+[07:00] Tariff: 5c | Net: +0.0kW | V2X(4.5kW)
+[08:00] Tariff: 5c | Net: +0.0kW | BatDis(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | V2X(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +0.8kW | Idling
+[14:00] Tariff: 10c | Net: +0.8kW | Idling
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +6.2kW | EVChg(5.015kW)
+[17:00] Tariff: 10c | Net: +5.0kW | EVChg(3.0kW)
+[18:00] Tariff: 10c | Net: +10.5kW | EVChg(7.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -0.9kW | BatChg(0.57kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -2.4kW | BatChg(1.567kW)
+[02:00] Tariff: 5c | Net: +0.0kW | BatChg(3.0kW)
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | BatDis(2.452kW) | V2X(1.548kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(2.07kW) | V2X(2.93kW)
+[07:00] Tariff: 5c | Net: +0.0kW | V2X(4.5kW)
+[08:00] Tariff: 5c | Net: +0.0kW | BatDis(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | V2X(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +0.8kW | Idling
+[14:00] Tariff: 10c | Net: +0.8kW | Idling
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +6.2kW | EVChg(5.015kW)
+[17:00] Tariff: 10c | Net: +5.0kW | EVChg(3.0kW)
+[18:00] Tariff: 10c | Net: +10.5kW | EVChg(7.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -1.5kW | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -0.9kW | BatChg(3.136kW)
+[02:00] Tariff: 5c | Net: +0.0kW | BatChg(3.0kW)
+[03:00] Tariff: 5c | Net: -1.0kW | BatChg(0.001kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(0.001kW) | V2X(4.999kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(2.022kW) | V2X(2.478kW)
+[08:00] Tariff: 5c | Net: +0.0kW | BatDis(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | BatDis(2.499kW) | V2X(0.001kW)
+[10:00] Tariff: 10c | Net: +1.5kW | Idling
+[11:00] Tariff: 10c | Net: +2.0kW | EVChg(1.015kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +0.8kW | Idling
+[14:00] Tariff: 10c | Net: +0.8kW | Idling
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +9.0kW | EVChg(7.0kW)
+[18:00] Tariff: 10c | Net: +10.5kW | EVChg(7.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -1.5kW | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -1.9kW | BatChg(2.137kW)
+[02:00] Tariff: 5c | Net: +0.0kW | BatChg(3.0kW)
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | V2X(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(2.022kW) | V2X(2.478kW)
+[08:00] Tariff: 5c | Net: +0.0kW | BatDis(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | BatDis(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +1.0kW | Idling
+[13:00] Tariff: 10c | Net: +0.8kW | Idling
+[14:00] Tariff: 10c | Net: +1.8kW | EVChg(1.015kW)
+[15:00] Tariff: 10c | Net: +0.8kW | Idling
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +2.0kW | Idling
+[18:00] Tariff: 10c | Net: +10.5kW | EVChg(7.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -1.5kW | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -1.9kW | BatChg(2.137kW)
+[02:00] Tariff: 5c | Net: +0.0kW | BatChg(3.0kW)
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | V2X(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(2.022kW) | V2X(2.478kW)
+[08:00] Tariff: 5c | Net: +0.0kW | BatDis(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | BatDis(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +1.0kW | Idling
+[13:00] Tariff: 10c | Net: +0.8kW | Idling
+[14:00] Tariff: 10c | Net: +1.8kW | EVChg(1.015kW)
+[15:00] Tariff: 10c | Net: +0.8kW | Idling
+[16:00] Tariff: 10c | Net: +8.2kW | EVChg(7.0kW)
+[17:00] Tariff: 10c | Net: +2.0kW | Idling
+[18:00] Tariff: 10c | Net: +10.5kW | EVChg(7.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: +0.0kW | BatChg(1.5kW) | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: -3.4kW | BatChg(0.637kW)
+[02:00] Tariff: 5c | Net: +0.0kW | BatChg(3.0kW)
+[03:00] Tariff: 5c | Net: +0.0kW | BatChg(1.0kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(3.022kW) | V2X(1.478kW)
+[08:00] Tariff: 5c | Net: +0.0kW | V2X(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | V2X(2.5kW)
+[10:00] Tariff: 10c | Net: +6.5kW | EVChg(5.015kW)
+[11:00] Tariff: 10c | Net: +1.0kW | Idling
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +0.8kW | Idling
+[14:00] Tariff: 10c | Net: +0.8kW | Idling
+[15:00] Tariff: 10c | Net: +0.8kW | Idling
+[16:00] Tariff: 10c | Net: +4.2kW | EVChg(3.0kW)
+[17:00] Tariff: 10c | Net: +2.0kW | Idling
+[18:00] Tariff: 10c | Net: +10.5kW | EVChg(7.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+  [t=20] 🚗 EV Departed (SoC: 45.463kWh)
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -1.5kW | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: +0.0kW | BatChg(4.0kW)
+[02:00] Tariff: 5c | Net: -1.9kW | BatChg(1.138kW)
+[03:00] Tariff: 5c | Net: -0.0kW | BatChg(0.999kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(0.522kW) | V2X(3.978kW)
+[08:00] Tariff: 5c | Net: +0.0kW | V2X(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | BatDis(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +5.7kW | EVChg(4.477kW)
+[17:00] Tariff: 10c | Net: +6.0kW | EVChg(4.001kW)
+[18:00] Tariff: 10c | Net: +6.5kW | EVChg(3.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -1.5kW | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: +0.0kW | BatChg(4.0kW)
+[02:00] Tariff: 5c | Net: -1.9kW | BatChg(1.138kW)
+[03:00] Tariff: 5c | Net: -0.0kW | BatChg(0.999kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(0.522kW) | V2X(3.978kW)
+[08:00] Tariff: 5c | Net: +0.0kW | V2X(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | BatDis(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +5.7kW | EVChg(4.477kW)
+[17:00] Tariff: 10c | Net: +6.0kW | EVChg(4.001kW)
+[18:00] Tariff: 10c | Net: +6.5kW | EVChg(3.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -1.5kW | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: +0.0kW | BatChg(4.0kW)
+[02:00] Tariff: 5c | Net: -1.9kW | BatChg(1.138kW)
+[03:00] Tariff: 5c | Net: -0.0kW | BatChg(0.999kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(0.522kW) | V2X(3.978kW)
+[08:00] Tariff: 5c | Net: +0.0kW | V2X(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | BatDis(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +5.7kW | EVChg(4.477kW)
+[17:00] Tariff: 10c | Net: +6.0kW | EVChg(4.001kW)
+[18:00] Tariff: 10c | Net: +6.5kW | EVChg(3.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+### 🧠 OR-Tools Mathematical Trace Log
+
+- **Battery Config**: Cap 10.0kWh | I/O 5.0kW | Eff 95%
+- **LCOS Applied**: 4.0 c/kWh degradation mapped to solver domain.
+- **Execution**: Initiating Google OR-Tools CP-SAT (Single Thread, 10s Timeout)...
+
+============================================================
+💡 DISPATCH TIMELINE
+============================================================
+[00:00] Tariff: 5c | Net: -1.5kW | WaterHeater(3.0kW)
+[01:00] Tariff: 5c | Net: +0.0kW | BatChg(4.0kW)
+[02:00] Tariff: 5c | Net: -1.9kW | BatChg(1.138kW)
+[03:00] Tariff: 5c | Net: -0.0kW | BatChg(0.999kW)
+[04:00] Tariff: 5c | Net: +0.0kW | BatDis(1.5kW)
+[05:00] Tariff: 5c | Net: +0.0kW | V2X(4.0kW)
+[06:00] Tariff: 5c | Net: +0.0kW | BatDis(5.0kW)
+[07:00] Tariff: 5c | Net: +0.0kW | BatDis(0.522kW) | V2X(3.978kW)
+[08:00] Tariff: 5c | Net: +0.0kW | V2X(3.5kW)
+[09:00] Tariff: 5c | Net: +0.0kW | BatDis(2.5kW)
+[10:00] Tariff: 10c | Net: +8.5kW | EVChg(7.0kW)
+[11:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[12:00] Tariff: 10c | Net: +8.0kW | EVChg(7.0kW)
+[13:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[14:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[15:00] Tariff: 10c | Net: +7.8kW | EVChg(7.0kW)
+[16:00] Tariff: 10c | Net: +5.7kW | EVChg(4.477kW)
+[17:00] Tariff: 10c | Net: +6.0kW | EVChg(4.001kW)
+[18:00] Tariff: 10c | Net: +6.5kW | EVChg(3.0kW)
+[19:00] Tariff: 15c | Net: +2.0kW | Idling
+[20:00] Tariff: 5c | Net: +0.0kW | Idling
+[21:00] Tariff: 5c | Net: -2.0kW | Idling
+[22:00] Tariff: 5c | Net: -3.5kW | Idling
+[23:00] Tariff: 5c | Net: -4.5kW | Idling
+============================================================
+
+
+📊 FINAL RESULTS: OR-Tools MPC Control
+Total Daily Grid Cost: $7.02
+
+
+**************************************************
+🏆 FINAL A3 GRANT METRICS
+**************************************************
+Baseline Cost: $24.51
+OR-Tools Cost: $7.02
+
+💰 Total Savings: $17.49 (71.4%)

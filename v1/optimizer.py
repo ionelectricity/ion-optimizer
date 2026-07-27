@@ -95,9 +95,13 @@ class HomeEnergyOptimizer:
         # ---------------------------------------------------------------------
         # 4. VARIABLES: EVSE & V2X (Midnight Crossing Topology)
         # ---------------------------------------------------------------------
-        ev_cap_wm100 = int(evse.vehicle_capacity_wh * 60 * 100)
+        # If the EV is not home yet, we use the forecasted/expected capacity and arrival SoC
+        expected_ev_cap = evse.vehicle_capacity_wh if evse.vehicle_capacity_wh is not None else 70_000
+        expected_ev_init_soc = evse.current_vehicle_soc_wh if evse.current_vehicle_soc_wh is not None else 14_000
+
+        ev_cap_wm100 = int(expected_ev_cap * 60 * 100)
         ev_max_w = int(evse.max_charge_power_w)
-        ev_init_wm100 = int(evse.current_vehicle_soc_wh * 60 * 100)
+        ev_init_wm100 = int(expected_ev_init_soc * 60 * 100)
         
         ev_chg = [self.model.NewIntVar(0, ev_max_w, f'ev_chg_{t}') for t in range(self.time_steps)]
         ev_dis = [self.model.NewIntVar(0, ev_max_w if evse.supports_v2x else 0, f'ev_dis_{t}') for t in range(self.time_steps)]

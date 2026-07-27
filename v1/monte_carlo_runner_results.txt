@@ -1,0 +1,24 @@
+🚀 Starting Monte Carlo Simulation (100 Days)
+Injecting stochastic noise into Solar PV, Base Load, and EV Driver Behavior...
+  ... Completed Day 10/100
+  ... Completed Day 20/100
+  ... Completed Day 30/100
+  ... Completed Day 40/100
+  ... Completed Day 50/100
+  ... Completed Day 60/100
+  ... Completed Day 70/100
+  ... Completed Day 80/100
+  ... Completed Day 90/100
+  ... Completed Day 100/100
+
+==================================================
+📊 FINAL MONTE CARLO A3 METRICS (100 Days)
+==================================================
+Simulation Time: 9145.4 seconds
+Average Daily Baseline Cost: $27.39
+Average Daily OR-Tools Cost: $7.99
+Average Daily Savings:       $19.40 (70.8%)
+Max Single-Day Savings:      $26.37
+Min Single-Day Savings:      $6.61
+
+💾 Full results saved to 'monte_carlo_a3_results.csv'
